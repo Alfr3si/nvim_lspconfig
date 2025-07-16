@@ -1,10 +1,16 @@
 return {
+
 	"MeanderingProgrammer/render-markdown.nvim",
 	dependencies = {
 		"nvim-treesitter/nvim-treesitter",
-		"echasnovski/mini.nvim",
+		"nvim-tree/nvim-web-devicons",
 	},
-	opts = {},
+	opts = {
+		completions = {
+			lsp = { enabled = true },
+			blink = { enabled = true },
+		},
+	},
 	ft = { "markdown" },
 	-- Alternar renderización
 	vim.keymap.set("n", "<leader>rm", "<cmd>RenderMarkdown toggle<CR>", {

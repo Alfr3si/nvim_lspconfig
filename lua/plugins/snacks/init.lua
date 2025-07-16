@@ -13,6 +13,8 @@ return {
 			notifier = { enabled = true },
 			image = { enabled = false },
 			statuscolumn = { enabled = true },
+			gitbrowse = { enabled = true },
+			lazygit = { enabled = true },
 		})
 	end,
 	--these keymaps are for picker

@@ -23,7 +23,7 @@ return {
 	},
 	--NOTE:there is for open toggle terminal 
 	{
-		"<C-_>",
+		"<C-t>",
 		function()
 			require("snacks").terminal()
 		end,
@@ -75,6 +75,13 @@ return {
 		desc = "Git Branches",
 	},
 	{
+		"<leader>gB",
+		function()
+			Snacks.gitbrowse()
+		end,
+		desc = "view the repository in the origin",
+	},
+	{
 		"<leader>gl",
 		function()
 			Snacks.picker.git_log()
@@ -94,5 +101,12 @@ return {
 			Snacks.picker.git_diff()
 		end,
 		desc = "Git Diff (Hunks)",
+	},
+	{
+		"<leader>lg",
+		function()
+			Snacks.lazygit()
+		end,
+		desc = "Open lazygit",
 	},
 }
