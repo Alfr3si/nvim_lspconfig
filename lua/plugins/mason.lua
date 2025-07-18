@@ -40,7 +40,7 @@ return {
 		end
 
 		-- List of tools externs :
-		local tools = { "black", "isort", "prettier", "prettierd", "stylua", "clang-format" }
+		local tools = { "black", "isort", "prettier", "prettierd", "stylua", "clang-format", "tree-sitter-cli" }
 		for _, tool in ipairs(tools) do
 			ensure_installed(tool)
 		end

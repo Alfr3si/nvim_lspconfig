@@ -11,7 +11,7 @@ return {
 			explorer = { enabled = true },
 			picker = { enabled = true },
 			notifier = { enabled = true },
-			image = { enabled = false },
+			image = { enabled = true },
 			statuscolumn = { enabled = true },
 			gitbrowse = { enabled = true },
 			lazygit = { enabled = true },

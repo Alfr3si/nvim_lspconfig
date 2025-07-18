@@ -1,26 +1,28 @@
 return {
-  "nvim-treesitter/nvim-treesitter",
-  event = "VeryLazy",
-  build = ":TSUpdate", -- recomendado para mantener actualizado
-  config = function()
-    require("nvim-treesitter.configs").setup {
-      ensure_installed = {
-        "lua",
-        "luadoc",
-        "php",
-        "css",
-        "javascript",
-        "html",
-        "python",
-        "c",
-        "sql",
-      },
-      highlight = {
-        enable = true,
-      },
-      indent = {
-        enable = true,
-      },
-    }
-  end,
+	"nvim-treesitter/nvim-treesitter",
+	event = "VeryLazy",
+	build = ":TSUpdate", -- for parsers update
+	opts = {
+		ensure_installed = {
+			"lua",
+			"luadoc",
+			"php",
+			"css",
+			"javascript",
+			"html",
+			"python",
+			"c",
+			"sql",
+			"markdown",
+			"markdown_inline", -- util for Snacks.image
+			"latex", -- 👈 these render latex
+		},
+		-- Install parsers synchronously (only applied to `ensure_installed`)
+		sync_install = false,
+		auto_install = true,
+		highlight = {
+			enable = true,
+		},
+		indent = { enable = true },
+	},
 }

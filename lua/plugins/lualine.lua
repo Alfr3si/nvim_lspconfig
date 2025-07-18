@@ -1,31 +1,6 @@
----@diagnostic disable : undefined-global
-local AlfTheme = {
-	normal = {
-		a = { fg = "#1e1e2e", bg = "#a8ff51", gui = "bold" },
-		b = { fg = "#cdd6f4", bg = "#5f537a" },
-		c = { fg = "#bac2de", bg = "#1e1e2e" },
-	},
-	insert = {
-		a = { fg = "#1e1e2e", bg = "#51ffda", gui = "bold" }, -- Verde claro
-	},
-	visual = {
-		a = { fg = "#1e1e2e", bg = "#ff51b0", gui = "bold" }, -- Rosa
-	},
-	replace = {
-		a = { fg = "#1e1e2e", bg = "#ff5c51", gui = "bold" }, -- Rojo
-	},
-	command = {
-		a = { fg = "#1e1e2e", bg = "#c37bfa", gui = "bold" }, -- Naranja
-	},
-	inactive = {
-		a = { fg = "#6c7086", bg = "#1e1e2e" },
-		b = { fg = "#6c7086", bg = "#1e1e2e" },
-		c = { fg = "#6c7086", bg = "#1e1e2e" },
-	},
-}
 return {
 	"nvim-lualine/lualine.nvim",
-	dependencies = { "nvim-tree/nvim-web-devicons" },
+	event = "VeryLazy",
 	config = function()
 		require("lualine").setup({
 			options = {
