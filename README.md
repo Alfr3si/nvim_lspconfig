@@ -37,6 +37,12 @@ This repository was created and adapted for my workflow, but everyone interested
 - fd
 - ripgrep
 - nodejs
+- npm
+- lazygit
+- imagemagick
+- ghostscript
+- tectonic
+- mermaid-cli
 
 ## clone the repository
 
