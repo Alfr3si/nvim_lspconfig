@@ -16,6 +16,8 @@ return {
 			"markdown",
 			"markdown_inline", -- util for Snacks.image
 			"latex", -- 👈 these render latex
+			"http",
+			"graphql",
 		},
 		-- Install parsers synchronously (only applied to `ensure_installed`)
 		sync_install = false,

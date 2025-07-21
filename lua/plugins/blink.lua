@@ -23,8 +23,18 @@ return {
 					nerd_font_variant = "normal",
 				},
 				sources = {
-					default = { "lsp", "path", "snippets", "buffer" },
+					default = { "lsp", "path", "snippets", "buffer", "lazydev" },
+					per_filetype = {
+						sql = { "snippets", "dadbod", "buffer" },
+					},
 					providers = {
+						dadbod = { name = "Dadbod", module = "vim_dadbod_completion.blink" },
+						lazydev = {
+							name = "LazyDev",
+							module = "lazydev.integrations.blink",
+							-- make lazydev completions top priority (see `:h blink.cmp`)
+							score_offset = 100,
+						},
 						cmdline = {
 							min_keyword_length = 2,
 						},

@@ -3,45 +3,6 @@ return {
 	dependencies = {
 		"williamboman/mason.nvim",
 		"saghen/blink.cmp",
-		{
-			"folke/lazydev.nvim",
-			ft = "lua", -- only load on lua files
-			opts = {
-				library = {
-					-- See the configuration section for more details
-					-- Load luvit types when the `vim.uv` word is found
-					{ path = "${3rd}/luv/library", words = { "vim%.uv" } },
-				},
-				sources = {
-					-- add lazydev to your completion providers
-					default = { "lazydev" },
-					providers = {
-						lazydev = {
-							name = "LazyDev",
-							module = "lazydev.integrations.blink",
-							score_offset = 100, -- show at a higher priority than lsp
-						},
-					},
-				},
-			},
-		},
-		{
-			"saghen/blink.cmp",
-			opts = {
-				sources = {
-					-- add lazydev to your completion providers
-					default = { "lazydev", "lsp", "path", "snippets", "buffer" },
-					providers = {
-						lazydev = {
-							name = "LazyDev",
-							module = "lazydev.integrations.blink",
-							-- make lazydev completions top priority (see `:h blink.cmp`)
-							score_offset = 100,
-						},
-					},
-				},
-			},
-		},
 		vim.diagnostic.config({
 			virtual_lines = true,
 			--[[ 	virtual_text = true, ]]
@@ -80,6 +41,7 @@ return {
 			require("lspconfig").html.setup({})
 			require("lspconfig").cssls.setup({})
 			require("lspconfig").tailwindcss.setup({})
+			require("lspconfig").sqlls.setup({})
 		end,
 	},
 }

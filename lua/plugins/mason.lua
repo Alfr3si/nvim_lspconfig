@@ -25,6 +25,7 @@ return {
 				"pyright",
 				"clangd",
 				"tailwindcss",
+				"sqlls",
 			},
 			automatic_installation = true,
 		})
@@ -40,7 +41,8 @@ return {
 		end
 
 		-- List of tools externs :
-		local tools = { "black", "isort", "prettier", "prettierd", "stylua", "clang-format", "tree-sitter-cli" }
+		local tools =
+			{ "black", "isort", "prettier", "prettierd", "stylua", "clang-format", "tree-sitter-cli", "sqlfluff" }
 		for _, tool in ipairs(tools) do
 			ensure_installed(tool)
 		end

@@ -109,4 +109,11 @@ return {
 		end,
 		desc = "Open lazygit",
 	},
+	{
+		"<leader>b",
+		function()
+			Snacks.picker.buffers()
+		end,
+		desc = "buffers",
+	},
 }

@@ -9,7 +9,7 @@ return {
 				transparent = false,
 				globalstatus = true,
 				component_separators = { left = "", right = "" },
-				section_separators = { left = "", right = "" },
+				section_separators = { left = " ", right = "" },
 				disabled_filetypes = {
 					"help",
 					"NvimTree",
@@ -73,8 +73,8 @@ return {
 				lualine_z = {},
 			},
 			tabline = {
-				lualine_a = { { "buffers", mode = 2 } }, -- mode = 2 => solo nombres
-				lualine_z = { "tabs" },
+				-- lualine_a = { { "buffers", mode = 2 } }, -- mode = 2 => solo nombres
+				-- lualine_z = { "tabs" },
 			},
 			extensions = {},
 		})
