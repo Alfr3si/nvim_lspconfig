@@ -7,6 +7,8 @@ vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower win
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 
 vim.keymap.set("n", "<leader>cp", "<CMD>Huefy<CR>", { desc = "color picker of plugin minty" })
+vim.keymap.set("n", "<leader>L", "<CMD>Lazy<CR>", { desc = "Launch Lazy interface" })
+vim.keymap.set("n", "<leader>M", "<CMD>Mason<CR>", { desc = "Open Mazon" })
 
 --there are commands utils with the servers LSP------------------
 vim.api.nvim_create_autocmd("LspAttach", {

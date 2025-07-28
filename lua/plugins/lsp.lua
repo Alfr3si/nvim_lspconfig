@@ -1,8 +1,8 @@
 return {
 	"neovim/nvim-lspconfig",
+	event = { "BufReadPost", "BufNewFile" },
 	dependencies = {
 		"williamboman/mason.nvim",
-		"saghen/blink.cmp",
 		vim.diagnostic.config({
 			virtual_lines = true,
 			--[[ 	virtual_text = true, ]]

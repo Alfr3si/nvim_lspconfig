@@ -1,11 +1,20 @@
 return {
 	"norcalli/nvim-colorizer.lua",
-	event = "VeryLazy",
+	ft = {
+		"css",
+		"html",
+		"php",
+		"javascript",
+		"tailwindcss",
+	},
+	cmd = "ColorizerToggle",
 	config = function()
 		require("colorizer").setup({
-			"*", -- Highlight all files, but customize some others.
 			css = { rgb_fn = true },
 			php = { rgb_fn = true },
+			html = { rgb_fn = true },
+			javascript = { rgb_fn = true },
+			tailwindcss = {},
 		})
 	end,
 }

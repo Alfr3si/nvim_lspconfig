@@ -19,6 +19,7 @@ return {
 		},
 		filetype = {
 			dotenv = { glyph = "", hl = "MiniIconsYellow" },
+			markdown = { glyph = "", hl = "MiniIconsGrey" },
 		},
 	},
 	init = function()

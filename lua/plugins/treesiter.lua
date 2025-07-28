@@ -1,6 +1,9 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
-	event = "VeryLazy",
+	event = {
+		"BufReadPost",
+		"BufNewFile",
+	},
 	build = ":TSUpdate", -- for parsers update
 	opts = {
 		ensure_installed = {

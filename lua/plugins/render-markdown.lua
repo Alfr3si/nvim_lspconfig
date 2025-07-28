@@ -9,6 +9,11 @@ return {
 		completions = {
 			lsp = { enabled = true },
 			blink = { enabled = true },
+			code = {
+				sign = false,
+				width = "block",
+				right_pad = 1,
+			},
 		},
 	},
 	ft = { "markdown" },

@@ -1,6 +1,6 @@
 return {
 	"nvim-lualine/lualine.nvim",
-	event = "VeryLazy",
+	event = { "BufReadPre", "BufNewFile" },
 	config = function()
 		require("lualine").setup({
 			options = {
@@ -8,8 +8,8 @@ return {
 				theme = "auto",
 				transparent = false,
 				globalstatus = true,
-				component_separators = { left = "", right = "" },
-				section_separators = { left = " ", right = "" },
+				component_separators = { left = "", right = "" },
+				section_separators = { left = "", right = "" },
 				disabled_filetypes = {
 					"help",
 					"NvimTree",
@@ -22,42 +22,44 @@ return {
 				always_divide_middle = true,
 			},
 			sections = {
-				lualine_a = { { "mode", icon = "" } },
+				lualine_a = {
+					{
+						"mode",
+						right_padding = 2,
+						icon = { " ", color = { fg = "#11a331" } },
+					},
+				},
 				lualine_b = {
 					{
 						"branch",
-						color = { fg = "#FFB84D", bg = "#444444", gui = "bold" },
+						right_padding = 4,
+						icon = { "", color = { fg = "#ff4000" } },
+						color = { fg = "#ffffff" },
+						separator = { right = "" },
 					},
-					"diagnostics",
 				},
-				lualine_c = { { "filename", path = 1 } },
+				lualine_c = {
+					{
+						"diagnostics",
+						symbols = {
+							Error = " ",
+							Warn = " ",
+							Hint = " ",
+							Info = " ",
+						},
+					},
+					{ "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 } },
+					{ "filename", path = 1 },
+				},
 				lualine_x = {
 					{
 						"diff",
 						symbols = {
-							added = "󰌴 ",
-							modified = "󱅄 ",
-							removed = "󱅁 ",
+							added = " ",
+							modified = " ",
+							removed = " ",
 						},
-						colored = true,
-						diff_color = {
-							added = { fg = "#98c379" },
-							modified = { fg = "#61afef" },
-							removed = { fg = "#e06c75" },
-						},
-						source = function()
-							local gitsigns = vim.b.gitsigns_status_dict
-							if gitsigns then
-								return {
-									added = gitsigns.added,
-									modified = gitsigns.changed,
-									removed = gitsigns.removed,
-								}
-							end
-						end,
 					},
-					"diagnostics",
-					"filetype",
 				},
 				lualine_y = {},
 				lualine_z = {
