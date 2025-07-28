@@ -13,6 +13,7 @@ return {
 				"clangd",
 				"tailwindcss",
 				"sqlls",
+				"marksman",
 			},
 			automatic_installation = true,
 		})
@@ -35,6 +36,8 @@ return {
 			"clang-format",
 			"tree-sitter-cli",
 			"sqlfluff",
+			"markdownlint-cli2",
+			"markdown-toc",
 		}) do
 			ensure_installed(tool)
 		end

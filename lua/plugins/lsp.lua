@@ -42,6 +42,7 @@ return {
 			require("lspconfig").cssls.setup({})
 			require("lspconfig").tailwindcss.setup({})
 			require("lspconfig").sqlls.setup({})
+			require("lspconfig").marksman.setup({})
 		end,
 	},
 }
